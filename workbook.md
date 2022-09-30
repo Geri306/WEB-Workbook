@@ -1,0 +1,283 @@
+# Web Module Questions
+
+### Functional patterns
+
+#### What is a callback function?
+
+#### What is ECMA script ? What is the difference between Javascript & ECMA script ?
+
+#### What is the difference between `let` & `var` ?
+
+#### Write an example where using the `var` declaration instead of the `let` could create a hard to debug code.
+
+<p>Var can be updated and redeclared within the same scope without getting an error. The second variable you declared with var overwrites the first one. This might cause you to accidentally overwrite the value of the existing variable with the same name and debugging becomes hard in this situation.</p>
+
+```javascript
+var variable = "Steve Harrington";
+var variable = "Will Barley";
+
+console.log(variable);
+
+// result: Will Barley => hard debugging because of no error message
+```
+
+#### Give a practical example where you would use the `reduce` function in javascript.
+
+> Sum the values in an array of objects
+
+> To sum up the values contained in an array of objects, you **must** supply an `initialValue`, so that each item passes through your function.
+
+```javascript
+const objects = [{ x: 1 }, { x: 2 }, { x: 3 }];
+const sum = objects.reduce((previousValue, currentValue) => previousValue + currentValue.x, 0);
+
+// initial Value: starting value (like let i = 0)
+
+console.log(sum); // logs 6
+```
+
+#### Give a practical example where you would use the `map` function in javascript.
+
+<p>For iterating over an array and calling function on every element of array</p>
+
+```javascript
+const array = [3, 4, 5, 6, 7];
+
+const newArray = array.map(function (element, index) {
+  return { key: index, value: element + element };
+});
+
+console.log(newArr);
+
+// result:
+
+[
+  { key: 0, value: 6 },
+  { key: 1, value: 8 },
+  { key: 2, value: 10 },
+  { key: 3, value: 12 },
+  { key: 4, value: 14 },
+];
+```
+
+#### Give a practical example where you would use the `filter` function in javascript.
+
+> For filtering out specific elements of an array or object which meet some kind of criteria.
+
+```javascript
+const words = ["spray", "limit", "elite", "enormous", "destruction", "present"];
+
+const result = words.filter((word) => word.length > 6);
+
+console.log(result); // => ["exuberant","destruction","present"]
+```
+
+### Web basics
+
+#### What is a web server?
+
+> 1. On the hardware side, a web server is a computer that stores web server software and a website's component files (e.g. HTML documents, images, CSS stylesheets, and JavaScript files). A web server connects to the Internet and supports physical data interchange with other devices connected to the web.
+
+> 2. On the software side, a web server includes several parts that control how web users access hosted files. At a minimum, this is an *HTTP server*. An HTTP server is a software that understands URLs (web adresses) and HTTP (the protocol your browser uses to view webpages). An HTTP server can be accessed through the domain names of the websites it stores, and it delivers the content of these hosted websites to the end user's device.
+
+#### Explain the client-server architecture.
+
+#### What is the difference between synchronous and asynchronous execution?
+
+#### What is `npm`? Why is it useful?
+
+#### What is the difference between the `depdendencies` & `devDependencies` in a `package.json` file ?
+
+#### What would be the impact of javascript `fetch` if it was not asyncronous ?
+
+#### Why benefits would bring to a developer to use the `Postman` application ?
+
+#### List the parts of the URL.
+
+#### What is query parameter?
+
+#### What kind of HTTP status codes do you know?
+
+#### How does an HTTP Request look like? What are the most relevant HTTP header fields?
+
+#### How does an HTTP Response look like? What are the most relevant HTTP header fields?
+
+#### Why should you ignore the `node_modules` folder in `.gitignore` ?
+
+### Rest API: Serve and Fetch
+
+#### Why is it recommend for a developer to use the http methods `get`, `put`, `delete` ?
+
+#### How does a `POST` request look like when it is made from a web browser (on the front end written) ?
+
+#### What is an API?
+
+#### What is REST API?
+
+#### What is JSON and how do we use it?
+
+#### What is API versioning ?
+
+#### Give 3 examples of HTTP response status codes ? Explain what each number means.
+
+### Advanced JavaScript
+
+#### How does the `ternary operator` looks like in javascript?
+
+#### How to import a function from another module in JavaScript?
+
+#### What is a shallow copy on an object?
+
+#### What is a callback function? Tell some examples of its usage.
+
+#### What is object destructuring in javascript?
+
+#### What is array destructuring in javascript?
+
+#### What is the spread operator in `js` ?
+
+#### What are the differences between the `arrow` function and the regular `function`?
+
+#### What is the `import` keyword used for?
+
+#### What is the `required` used for?
+
+#### What are template literals?
+
+### Testing basics
+
+#### What is code coverage? Why is it used?
+
+#### What is a test case? What is an assertion? Give examples!
+
+#### What are the unit testing best practices? (Eg. how many assertion should a test case contain?)
+
+#### What is arrange/act/assert pattern?
+
+#### How do you test asynchronous code with `jest` ?
+
+#### What is `setup` & `teardown` in jest ?
+
+#### Give an example when you would use in `jest` the `toBe` & `toEqual` assertions.
+
+### React basics
+
+#### What benefits does it bring for a developer to use `components` (opposed of writing all the code in a single file) ?
+
+#### What is the difference between Element and Component?
+
+#### How do you pass values between components in `react`?
+
+#### What is `key` prop?
+
+#### How does a child component pass data to it's parent component ?
+
+#### Write the code to create in JSX an HTML DIV element that has the innerText the contents of the variable `let name = 'Andrew'`
+
+#### Write the code to create in JSX an unordered list from the array `let names = ["Mathew", "John", "Maverik"]`
+
+#### Write the code to set the background color red of a div in JSX.
+
+### Testing react
+
+#### What are unit tests, integration tests? What is the major difference between these two?
+
+#### What is unit testing?
+
+#### What does `mocking` mean from a testing perspective ? Give an example when you would use it.
+
+#### How do you test that function was called `at least` 2 times using `jest` ?
+
+#### Name 4 benefits a developer gets from writing tests.
+
+### React patterns
+
+#### What is the difference between Real DOM and Virtual DOM?
+
+#### When adding an item to an array, why is it necessary to pass a new array to the `useState` hook ?
+
+#### Describe what techniques or tools you use to debug a react app.
+
+#### What is the difference between a react `class` component & a `functional` component ?
+
+#### Name 3 lifecycle states in a react `functional` component.
+
+#### What is conditional rendering in `react` ? Give an example.
+
+#### Write the code that prints to the console `component destroyed` when the component it is part of is removed from the DOM tree.
+
+#### Why is there an infinite loop in this code
+
+```javascript
+function App() {
+  const [count, setCount] = useState(0); //initial value of this
+  useEffect(() => {
+    setCount((count) => count + 1); //increment this Hook
+  }); //no dependency array.
+  return (
+    <div className="App">
+      <p> value of count: {count} </p>
+    </div>
+  );
+}
+```
+
+#### Why is there an infinite loop in this code
+
+```javascript
+async function App() {
+  const [count, setCount] = useState("");
+  setCount(count + 1);
+  return (
+    <div className="App">
+      <p> value of count: {count} </p>
+    </div>
+  );
+}
+```
+
+### Mongo & mongoose
+
+#### What is a database schema ?
+
+#### Why is the `id` unique in a database ?
+
+#### What are the advatanges & disadvatages of using `lean()` function in a mongo query ?
+
+#### Write the code to store the object `{name: "Andrew", age: 10}` to a mongo database. You can ignore the part of connection parameters.
+
+#### Write the code to delete from a mongo database all employees that are over 18 years. The scheme for an employee is `{name: string, age: int}`. You can ignore the part of connection parameters.
+
+#### Write the code to display in the console from a mongo database the employees who are over 18 years. The scheme for an employee is `{name: string, age: int}`. You can ignore the part of connection parameters.
+
+#### Write the code to update from a mongo database the employees with name='John' and set the new age to 8. The scheme for an employee is `{name: string, age: int}`. You can ignore the part of connection parameters.
+
+### Authentication (cookies + google)
+
+#### How to properly store passwords?
+
+#### What is encryption and decryption?
+
+#### What is hashing?
+
+#### What is OAuth2?
+
+#### What is the difference between encryption and hashing? When would you use which?
+
+#### How/where would you store sensitive data (like db password, API key, ...) of your application?
+
+#### What would you use a session for?
+
+#### What would you use a cookie for?
+
+### Mern stack
+
+#### What does `MERN` stand for in the context of web development ?
+
+#### What is routing in the context of a `react` app ?
+
+#### What is routing in the context of an `express` app ?
+
+#### What is `CORS` policy ?
+
+#### What advantages does a developer have for using `bootstrap` or `material ui` ?
