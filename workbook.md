@@ -4,9 +4,19 @@
 
 #### What is a callback function?
 
+> a function passed into another function as an argument, which is then invoked inside the outer function to complete some action <br>[MDN - Callback function](https://developer.mozilla.org/en-US/docs/Glossary/Callback_function)
+
 #### What is ECMA script ? What is the difference between Javascript & ECMA script ?
 
+> JavaScript is a general-purpose scripting language that conforms to the ECMAScript specification. The ECMAScript specification is a blueprint for creating a scripting language. JavaScript is an implementation of that blueprint. On the whole, JavaScript implements the ECMAScript specification as described in ECMA-262. <br>[Cloudacademy - difference between ECMAScript and JavaScript](https://cloudacademy.com/course/the-difference-between-ecma-script-and-javascript/the-difference-between-ecmascript-and-javascript/#:~:text=JavaScript%20is%20a%20general%2Dpurpose,as%20described%20in%20ECMA%2D262.)
+
 #### What is the difference between `let` & `var` ?
+
+> **let:** block-scoped, can't be redeclared, hoisting doesn't occur
+>
+> **var:** function scoped, can be redeclared, hoisting occurs
+>
+> [Programiz](https://www.programiz.com/javascript/let-vs-var)
 
 #### Write an example where using the `var` declaration instead of the `let` could create a hard to debug code.
 
@@ -35,6 +45,7 @@ const sum = objects.reduce((previousValue, currentValue) => previousValue + curr
 
 console.log(sum); // logs 6
 ```
+> [MDN - Reduce](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce#sum_of_values_in_an_object_array)
 
 #### Give a practical example where you would use the `map` function in javascript.
 
@@ -72,17 +83,24 @@ const result = words.filter((word) => word.length > 6);
 console.log(result); // => ["exuberant","destruction","present"]
 ```
 
+> [MDN - filter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
+
 ### Web basics
 
 #### What is a web server?
 
 > 1. On the hardware side, a web server is a computer that stores web server software and a website's component files (e.g. HTML documents, images, CSS stylesheets, and JavaScript files). A web server connects to the Internet and supports physical data interchange with other devices connected to the web.
 
-> 2. On the software side, a web server includes several parts that control how web users access hosted files. At a minimum, this is an *HTTP server*. An HTTP server is a software that understands URLs (web adresses) and HTTP (the protocol your browser uses to view webpages). An HTTP server can be accessed through the domain names of the websites it stores, and it delivers the content of these hosted websites to the end user's device.
+> 2. On the software side, a web server includes several parts that control how web users access hosted files. At a minimum, this is an *HTTP server*. An HTTP server is a software that understands URLs (web adresses) and HTTP (the protocol your browser uses to view webpages). An HTTP server can be accessed through the domain names of the websites it stores, and it delivers the content of these hosted websites to the end user's device. <br> [MDN - what is a web server?](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_web_server#summary)
 
 #### Explain the client-server architecture.
 
+> The Client-server model is a distributed application structure that partitions task or workload between the providers of a resource or service, called servers, and service requesters called clients. In the client-server architecture, when the client computer sends a request for data to the server through the internet, the server accepts the requested process and deliver the data packets requested back to the client. Clients do not share any of their resources. Examples of Client-Server Model are Email, World Wide Web, etc. <br> [Geeks for Geeks - Client-server model](https://www.geeksforgeeks.org/client-server-model/)
+
 #### What is the difference between synchronous and asynchronous execution?
+
+> Synchronous or Synchronized means "connected", or "dependent" in some way. In other words, two synchronous tasks must be aware of one another, and one task must execute in some way that is dependent on the other, such as wait to start until the other task has completed.
+Asynchronous means they are totally independent and neither one must consider the other in any way, either in the initiation or in execution. <br> [Stack Overflow](https://stackoverflow.com/a/748235/19306550)
 
 #### What is `npm`? Why is it useful?
 
