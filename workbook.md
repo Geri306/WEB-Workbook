@@ -100,21 +100,47 @@ console.log(result); // => ["exuberant","destruction","present"]
 #### What is the difference between synchronous and asynchronous execution?
 
 > Synchronous or Synchronized means "connected", or "dependent" in some way. In other words, two synchronous tasks must be aware of one another, and one task must execute in some way that is dependent on the other, such as wait to start until the other task has completed.
-Asynchronous means they are totally independent and neither one must consider the other in any way, either in the initiation or in execution. <br> [Stack Overflow](https://stackoverflow.com/a/748235/19306550)
+
+> Asynchronous means they are totally independent and neither one must consider the other in any way, either in the initiation or in execution. <br> [Stack Overflow](https://stackoverflow.com/a/748235/19306550)
 
 #### What is `npm`? Why is it useful?
 
+> Node package manager is the world's largest software registry. It's open-source and free to use (no authentication nor login needed). It's installed with Node.js. We can install packages through CLI and we can also publish our own software/package.
+
 #### What is the difference between the `depdendencies` & `devDependencies` in a `package.json` file ?
+
+- "dependencies": Packages required by your application in production.
+- "devDependencies": Packages that are only needed for local development and testing. <br> [Geeks for Geeks](https://www.geeksforgeeks.org/difference-between-dependencies-devdependencies-and-peerdependencies/)
 
 #### What would be the impact of javascript `fetch` if it was not asyncronous ?
 
+> It would stall the execution of the code until the fetched resource is not returned.
+
 #### Why benefits would bring to a developer to use the `Postman` application ?
+
+- Helps to design, build, test and iterate APIs
+- Provides API repository: Allows users to store, catalog, and collaborate around API artifacts in a central platform within public, private, or partner networks
+- Provides API tools: API client, API design, API documentation, API testing, mock servers, and API detection
 
 #### List the parts of the URL.
 
+- protocol (*http*), domain name (third-level ("sub-domain" *www*), second-level (*google*), top-level *com*), port, path, query (*?*), parameters, fragment (*#*) [URL-Anatomy](https://doepud.co.uk/images/complex-url.svg)
+
 #### What is query parameter?
 
+> Query parameters are a defined set of parameters attached to the end of a url. They are extensions of the URL that are used to help define specific content or actions based on the data being passed. To append query params to the end of a URL, a ‘?’ Is added followed immediately by a query parameter. [branch.io](https://branch.io/glossary/query-parameters/)
+
+> A query string is a part of a uniform resource locator (URL) that assigns values to specified parameters. A query string commonly includes fields added to a base URL by a Web browser or other client application, for example as part of an HTML, choosing the appearance of a page, or jumping to positions in multimedia content. [Wikipedia](https://en.wikipedia.org/wiki/Query_string)
+
 #### What kind of HTTP status codes do you know?
+
+> - Informational responses (100 – 199)
+> - Successful responses (200 – 299)
+> - Redirection messages (300 – 399)
+> - Client error responses (400 – 499)
+> - Server error responses (500 – 599)
+
+- 100 continue, 101 switching protocolls, 200 OK, 201 created, 204 no content, 300 multiple choices, 301 moved permanently, 400 bad request, 404 not found, 500 internal server error, 502 bad gateway
 
 #### How does an HTTP Request look like? What are the most relevant HTTP header fields?
 
